@@ -61,7 +61,7 @@ public class Texture {
 				}
 				
 				JSONObject frame = new JSONObject();
-				frame.put("filename", keyVal);
+				frame.put("name", keyVal);
 				
 				JSONArray u = new JSONArray();
 				JSONArray v = new JSONArray();
@@ -88,11 +88,11 @@ public class Texture {
 			
 			JSONObject jAtlas = new JSONObject();
 			
-			jAtlas.put("frames", frames);
-			jAtlas.put("image", name + ".png");
+			jAtlas.put("textures", frames);
+			jAtlas.put("atlas", name + ".png");
 			
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
-			String jString = gson.toJson(jAtlas);
+			String jString = gson.toJson(jAtlas) + '\n';
 			
 			FileWriter file = new FileWriter(name + ".json");
 			file.write(jString);
