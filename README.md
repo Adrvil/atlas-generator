@@ -14,8 +14,8 @@ AtlasGenerator "name" "width" "height" "padding" "border" "unitCoordinates" 'dir
 - "width": Atlas width
 - "height": Atlas height
 - "padding": Padding between images in the final texture atlas.
-- "border": Every image will have a 1 pixel border"
-- "unitCoordinates": Coordinates will be saved to atlas txt file in 0..1 range instead of 0..width, 0..height range
+- "border": Every image will have a 1 pixel border (1 - true, 0 - false)
+- "unitCoordinates": Coordinates will be saved to atlas txt file in 0..1 range instead of 0..width, 0..height range (1 - true, 0 - false)
 - "directory": Path to directory with images.
   
 Example: 
